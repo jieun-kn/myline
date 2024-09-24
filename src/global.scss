@@ -1,0 +1,656 @@
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+*,
+html,
+body {
+  font-size: 16px;
+  color: unset;
+  font-weight: normal;
+  line-height: unset;
+  letter-spacing: unset;
+  /* 크롬, 사파리, 오페라 신버전 */
+  -webkit-text-size-adjust: none;
+  /* IE */
+  -ms-text-size-adjust: none;
+  /* 파이어폭스 */
+  -moz-text-size-adjust: none;
+  /* 오페라 구버전 */
+  -o-text-size-adjust: none;
+}
+
+body {
+  line-height: 1;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+em,
+img,
+ins,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+audio,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+div,
+p,
+span {
+  white-space: pre-line;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+main,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  box-sizing: border-box;
+  display: block;
+}
+
+ul,
+li,
+dl,
+dd,
+dt {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  border: 0;
+  outline: none;
+  resize: none;
+  box-sizing: border-box;
+}
+
+input,
+select,
+button {
+  vertical-align: middle;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+/** Correct the inability to style clickable types in iOS and Safari. */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+/** * Remove the inner border and padding in Firefox. */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/** * Restore the focus styles unset by the previous rule. */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/** * 1. Add the correct box sizing in IE 10. * 2. Remove the padding in IE 10. */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/** * Correct the cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/** * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari. */
+[type="search"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/** * Remove the inner padding in Chrome and Safari on macOS. */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/** * 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari. */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+button {
+  cursor: pointer;
+}
+
+/********** ionic reset ********/
+ion-toolbar {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --min-height: 56px;
+  --background: #fff;
+}
+
+ion-tab-bar {
+  min-height: 56px;
+  --background: #fff;
+  --border: 0;
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0 0 0;
+}
+
+.footer-ios ion-toolbar:first-of-type {
+  --border-width: 0;
+}
+
+html.ios ion-modal ion-toolbar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+ion-label {
+  margin: 0;
+}
+
+ion-list-header {
+  padding: 0;
+  min-height: auto;
+  align-items: center;
+}
+
+ion-card {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  ion-card-header {
+    padding: 0;
+    ion-card-title {
+      font-weight: normal;
+    }
+    ion-card-subtitle {
+      margin: 0;
+    }
+  }
+  ion-card-content.card-content-ios {
+    padding: 0;
+  }
+}
+
+.sc-ion-label-ios-s p,
+.card-content-ios p {
+  margin: 0;
+  color: #161616;
+}
+
+ion-segment {
+  --background: #fff;
+  border-radius: 0;
+}
+
+ion-segment-button {
+  margin: 0;
+  --border-radius: 0;
+  --border-width: 0;
+  --indicator-box-shadow: none;
+  min-height: unset;
+}
+
+ion-item {
+  --border-width: 0;
+  --inner-border-width: 0;
+  --min-height: unset;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --background-activated: none;
+  --background-focused: none;
+  --background-hover: none;
+  --background-activated-opacity: 0;
+  --background-focused-opacity: 0;
+  --background-hover-opacity: 0;
+  &::part(native) {
+    padding: 0;
+  }
+  &::part(detail-icon) {
+    display: none;
+  }
+}
+
+ion-badge {
+  padding: 0;
+}
+
+ion-button {
+  margin: 0;
+  height: auto;
+  border-radius: 0;
+  --border-radius: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --background-activated: none;
+  --background-focused: none;
+  --background-hover: none;
+  &[disabled] {
+    opacity: 1;
+  }
+}
+
+ion-item-divider {
+  --background: unset;
+  min-height: auto;
+  --inner-padding-end: 0;
+  --padding-start: 0;
+}
+
+ion-grid {
+  padding: 0;
+}
+
+ion-col {
+  padding: 0;
+}
+
+ion-accordion {
+  ion-item {
+    --background-activated: #fff;
+  }
+}
+
+ion-radio {
+  margin: 0;
+}
+
+ion-checkbox {
+  margin: 0;
+}
+
+ion-select {
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --placeholder-opacity: 1;
+}
+
+ion-avatar {
+  --border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sc-ion-input-ios-h,
+.sc-ion-textarea-ios-h {
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --placeholder-color: ;
+  --placeholder-opacity: 1;
+}
+
+.sc-ion-searchbar-ios-h {
+  padding: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  --placeholder-color: ;
+  --placeholder-opacity: 1;
+}
+
+ion-alert.sc-ion-alert-ios-h {
+  --max-width: 263px;
+}
+
+// modal 가로 세로 100%
+.modal-wrapper.sc-ion-modal-ios {
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+
+ion-radio {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+ion-checkbox {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  --border-color-checked: transparent;
+  --checkmark-color: transparent;
+  --checkmark-width: 0;
+}
+
+// 전체 모달 safe-area
+.show-modal-safe {
+  .ion-page {
+    ion-header {
+      /* Status bar height on iOS 10 */
+      padding-top: 20px;
+      /* Status bar height on iOS 11.0 */
+      padding-top: constant(safe-area-inset-top);
+      /* Status bar height on iOS 11+ */
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+}
+
+ion-select {
+  // select의 체크 아이콘 유무
+  &::part(icon) {
+    display: none;
+  }
+}
+
+ion-chip {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+ion-button {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+// Toast
+// ion-toast {
+//   --start: ;
+//   --end: ;
+//   --height: ;
+//   --border-radius: ;
+//   --background: ;
+//   font-weight: ;
+//   font-size: ;
+//   line-height: ;
+//   color: ;
+//   text-align: ;
+//   transform: translateY(); // toast 위치 이동
+// }
+
+ion-button {
+  margin: 0;
+  height: auto;
+  border-radius: 0;
+  --border-radius: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --background-activated: none;
+  --background-focused: none;
+  --background-hover: none;
+  overflow: hidden;
+
+  &[disabled] {
+    opacity: 1;
+  }
+}
+
+.sc-ion-buttons-ios-s ion-button:not(.button-round) {
+  --border-radius: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.sc-ion-buttons-ios-s ion-button {
+  height: 44px;
+  --margin-inline-start: 0;
+  --margin-inline-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+ion-loading {
+  .loading-wrapper {
+    width: 2.25rem;
+    background: transparent;
+    border-radius: 100%;
+    padding: 3px;
+  }
+  &.no-backdrop,
+  &.empty-load {
+    .sc-ion-loading-ios.ios.backdrop-no-tappable {
+      display: none;
+    }
+  }
+  &.empty-load {
+    .loading-wrapper {
+      display: none;
+    }
+  }
+}
+
+ion-alert.sc-ion-alert-ios-h {
+  --backdrop-opacity: 0.65;
+  --background: #fff;
+  .alert-wrapper.sc-ion-alert-ios {
+    border-radius: 0;
+  }
+  // 알럿 헤더
+  .alert-head.sc-ion-alert-ios {
+    padding: 0;
+  }
+  // 알럿 헤더에 있는 텍스트 영역
+  .alert-title.sc-ion-alert-ios {
+    margin: 0;
+  }
+
+  // 얼럿 내용
+  .alert-message.sc-ion-alert-ios {
+    //얼럿 글자 css 작성 영역
+    padding: 0;
+    white-space: pre-line;
+    word-break: keep-all;
+  }
+
+  // 버튼
+  .alert-button-group {
+    // .alert-button.sc-ion-alert-ios {
+    // 	// 얼럿 버튼의 보더 영역입니다.
+    //   // border-width: width;
+    //   // border-color: color;
+    // }
+    button {
+      min-height: height; // 버튼 height css 영역
+      // span {
+      //  // 버튼 글자 공통 css 영역
+      // }
+    }
+    //.alert-button-role-ok (취소 또는 확인 버튼 둘 중에 하나만 css 바꾸시면 됩니다.)
+    // .alert-button-role-cancel {
+    //   // span {
+    //   // }
+    // }
+  }
+}
+
+// 뒤로가기 버튼
+.show-back-button {
+  width: 44px;
+  height: 44px;
+  // background: url(./assets/icon/favicon.png) no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+
+// 리스트 없을때
+.list-none {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    text-align: center;
+  }
+}
+
+//말줄임 1줄
+.row-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+//말줄임 2줄
+.rows-ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+@media screen and (max-width: 340px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 280px) {
+  *,
+  html,
+  body {
+    font-size: 13px;
+  }
+}

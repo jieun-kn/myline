@@ -1,0 +1,28 @@
+
+:: 빌드 주의사항 :: 
+
+> ANDROID(안드로이드)
+
+1) API
+     android:usesCleartextTraffic="true”
+
+> IOS(애플)
+
+
+1) API
+
+     <key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+
+2) 수출문서
+     <key>ITSAppUsesNonExemptEncryption</key>
+     <false/>
+
+
+3) Onesignal (if let config = config)
+     if let handleApplicationNotifs = config[keyPath: "handleApplicationNotifications"] as? Bool {
+          handleApplicationNotifications = handleApplicationNotifs
+     }
